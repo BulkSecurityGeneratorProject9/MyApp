@@ -1,7 +1,7 @@
 import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {MyAppSharedModule} from '../../shared';
 import {HomeAdminComponent} from './home-admin.component';
-import {ROUTES} from "./home-admin.route";
+import {ROUTES} from './home-admin.route';
 
 @NgModule({
     imports: [
