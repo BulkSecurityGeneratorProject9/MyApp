@@ -1,11 +1,20 @@
 <!--<jhi-page-ribbon></jhi-page-ribbon>-->
-<!--<div>-->
-    <!--<router-outlet name="navbar"></router-outlet>-->
+<!--<div hidden>-->
+<!--<router-outlet name="navbar"></router-outlet>-->
 <!--</div>-->
+<!--<div class="container-fluid">-->
+<!--<div class="card jh-card">-->
+<!--<router-outlet></router-outlet>-->
+<!--<router-outlet name="popup"></router-outlet>-->
+<!--</div>-->
+<!--<jhi-footer></jhi-footer>-->
+<!--</div>-->
+
+<!--<pre>{{languages | json}}</pre>-->
+
 <div class="container-fluid">
     <div class="card jh-card">
-        <router-outlet></router-outlet>
-        <!--<router-outlet name="popup"></router-outlet>-->
+        <jhi-home-page></jhi-home-page>
     </div>
-    <!--<jhi-footer></jhi-footer>-->
+    <jhi-footer></jhi-footer>
 </div>
