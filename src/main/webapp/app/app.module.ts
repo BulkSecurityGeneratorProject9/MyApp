@@ -26,7 +26,8 @@ import {
     PageRibbonComponent,
     ActiveMenuDirective,
     ErrorComponent,
-    HomePageComponent
+    HomePageComponent,
+    SigninComponent
 } from './layouts';
 
 @NgModule({
@@ -49,7 +50,8 @@ import {
         PageRibbonComponent,
         ActiveMenuDirective,
         FooterComponent,
-        HomePageComponent
+        HomePageComponent,
+        SigninComponent
     ],
     providers: [
         ProfileService,
