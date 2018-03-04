@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Ng2Webstorage, LocalStorageService, SessionStorageService  } from 'ngx-webstorage';
 import { JhiEventManager } from 'ng-jhipster';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthInterceptor } from './blocks/interceptor/auth.interceptor';
 import { AuthExpiredInterceptor } from './blocks/interceptor/auth-expired.interceptor';
 import { ErrorHandlerInterceptor } from './blocks/interceptor/errorhandler.interceptor';
@@ -32,6 +32,7 @@ import {
 @NgModule({
     imports: [
         BrowserModule,
+        BrowserAnimationsModule,
         MyAppAppRoutingModule,
         Ng2Webstorage.forRoot({ prefix: 'jhi', separator: '-'}),
         MyAppSharedModule,
