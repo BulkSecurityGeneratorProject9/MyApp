@@ -10,7 +10,8 @@ import {
     InputTextModule,
     ButtonModule,
     MenuModule,
-    DropdownModule
+    DropdownModule,
+    CardModule
 } from 'primeng/primeng';
 @NgModule({
     imports: [
@@ -35,7 +36,8 @@ import {
         InputTextModule,
         ButtonModule,
         MenuModule,
-        DropdownModule
+        DropdownModule,
+        CardModule
     ]
 })
 export class MyAppSharedLibsModule {}

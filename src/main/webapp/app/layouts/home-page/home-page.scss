@@ -1,0 +1,119 @@
+.login-body {
+    height: 100%;
+    font-family: "latoregular", "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 100px 0 0 0;
+
+    background: url("../../../content/images/city-b.jpg") no-repeat center top;
+    background-size: contain;
+
+    //background-image: linear-gradient(to top, #6b77a1, #737ea5 3%, #9599b3 15%, #b1b0bf 28%, #c7c1c8 41%, #d6cdcf 57%, #dfd5d3 74%, #e2d7d4);
+    //background-image: -ms-linear-gradient(bottom, #6B77A1 0%, #737EA5 3%, #9599B3 15%, #B1B0BF 28%, #C7C1C8 41%, #D6CDCF 57%, #DFD5D3 74%, #E2D7D4 100%);
+    //background-image: -moz-linear-gradient(bottom, #6B77A1 0%, #737EA5 3%, #9599B3 15%, #B1B0BF 28%, #C7C1C8 41%, #D6CDCF 57%, #DFD5D3 74%, #E2D7D4 100%);
+    //background-image: -o-linear-gradient(bottom, #6B77A1 0%, #737EA5 3%, #9599B3 15%, #B1B0BF 28%, #C7C1C8 41%, #D6CDCF 57%, #DFD5D3 74%, #E2D7D4 100%);
+    //background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #6B77A1), color-stop(3, #737EA5), color-stop(15, #9599B3), color-stop(28, #B1B0BF), color-stop(41, #C7C1C8), color-stop(57, #D6CDCF), color-stop(74, #DFD5D3), color-stop(100, #E2D7D4));
+    //background-image: -webkit-linear-gradient(bottom, #6B77A1 0%, #737EA5 3%, #9599B3 15%, #B1B0BF 28%, #C7C1C8 41%, #D6CDCF 57%, #DFD5D3 74%, #E2D7D4 100%);
+
+    //expresso
+    //background: #ad5389;  /* fallback for old browsers */
+    //background: -webkit-linear-gradient(to bottom, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
+    //background: linear-gradient(to bottom, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    //pun yeta
+    //background: #108dc7;  /* fallback for old browsers */
+    //background: -webkit-linear-gradient(to bottom, #ef8e38, #108dc7);  /* Chrome 10-25, Safari 5.1-6 */
+    //background: linear-gradient(to bottom, #ef8e38, #108dc7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    //summer
+    //background: #22c1c3;  /* fallback for old browsers */
+    //background: -webkit-linear-gradient(to bottom, #fdbb2d, #22c1c3);  /* Chrome 10-25, Safari 5.1-6 */
+    //background: linear-gradient(to bottom, #fdbb2d, #22c1c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    //digital water
+    //background: #74ebd5;  /* fallback for old browsers */
+    //background: -webkit-linear-gradient(to bottom, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
+    //background: linear-gradient(to bottom, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    //digital water reverse
+    //background: #ACB6E5;  /* fallback for old browsers */
+    //background: -webkit-linear-gradient(to bottom, #74ebd5, #ACB6E5);  /* Chrome 10-25, Safari 5.1-6 */
+    //background: linear-gradient(to bottom, #74ebd5, #ACB6E5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    //sunlime light
+    //background: #FC5C7D;  /* fallback for old browsers */
+    //background: -webkit-linear-gradient(to bottom, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
+    //background: linear-gradient(to bottom, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    //harmonic energy
+    //background: #16A085;  /* fallback for old browsers */
+    //background: -webkit-linear-gradient(to bottom, #F4D03F, #16A085);  /* Chrome 10-25, Safari 5.1-6 */
+    //background: linear-gradient(to bottom, #F4D03F, #16A085); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    //velvet sun
+    //background: #fffbd5;  /* fallback for old browsers */
+    //background: -webkit-linear-gradient(to bottom, #b20a2c, #fffbd5);  /* Chrome 10-25, Safari 5.1-6 */
+    //background: linear-gradient(to bottom, #b20a2c, #fffbd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    //pink flavour
+    //background: #800080;  /* fallback for old browsers */
+    //background: -webkit-linear-gradient(to bottom, #ffc0cb, #800080);  /* Chrome 10-25, Safari 5.1-6 */
+    //background: linear-gradient(to bottom, #ffc0cb, #800080); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    //relaxing red
+    //background: #fffbd5;  /* fallback for old browsers */
+    //background: -webkit-linear-gradient(to bottom, #b20a2c, #fffbd5);  /* Chrome 10-25, Safari 5.1-6 */
+    //background: linear-gradient(to bottom, #b20a2c, #fffbd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    //reef
+    //background: #00d2ff;  /* fallback for old browsers */
+    //background: -webkit-linear-gradient(to bottom, #3a7bd5, #00d2ff);  /* Chrome 10-25, Safari 5.1-6 */
+    //background: linear-gradient(to bottom, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    //Jodhpur
+    //background: #9CECFB;  /* fallback for old browsers */
+    //background: -webkit-linear-gradient(to bottom, #0052D4, #65C7F7, #9CECFB);  /* Chrome 10-25, Safari 5.1-6 */
+    //background: linear-gradient(to bottom, #0052D4, #65C7F7, #9CECFB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    //atlas
+    //background: #FEAC5E;  /* fallback for old browsers */
+    //background: -webkit-linear-gradient(to bottom, #4BC0C8, #C779D0, #FEAC5E);  /* Chrome 10-25, Safari 5.1-6 */
+    //background: linear-gradient(to bottom, #4BC0C8, #C779D0, #FEAC5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    //opa
+    //background: #3D7EAA;  /* fallback for old browsers */
+    //background: -webkit-linear-gradient(to bottom, #FFE47A, #3D7EAA);  /* Chrome 10-25, Safari 5.1-6 */
+    //background: linear-gradient(to bottom, #FFE47A, #3D7EAA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E2D7D4', endColorstr='#6B77A1',GradientType=0 );
+    box-sizing: border-box;
+    //background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#login-wrapper {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#login-container {
+    margin-top: 20px;
+    box-sizing: border-box;
+    height: 450px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    padding: 2em;
+    text-align: center;
+    color: #4f575b;
+}
+
+.login-footer {
+    color: #ffffff;
+    font-size: 14px;
+    margin-top: 150px;
+}
+
+.login-footer-down {
+    margin-top: 50px;
+}
