@@ -10,3 +10,4 @@ export * from './profiles/profile.service';
 export * from './profiles/profile-info.model';
 export * from './home-page/home-page.component';
 export * from './signin/signin.component';
+export * from './signup/signup.component';
