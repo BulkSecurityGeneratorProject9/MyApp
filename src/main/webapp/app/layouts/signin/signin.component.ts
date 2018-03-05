@@ -1,14 +1,16 @@
-import { Component, AfterViewInit, Renderer, ElementRef } from '@angular/core';
-import { Router } from '@angular/router';
-import { JhiEventManager } from 'ng-jhipster';
+import {Component, AfterViewInit, Renderer, ElementRef} from '@angular/core';
+import {Router} from '@angular/router';
+import {JhiEventManager} from 'ng-jhipster';
 
-import { LoginService } from '../../shared/login/login.service';
-import { StateStorageService } from '../../shared/auth/state-storage.service';
+import {LoginService} from '../../shared/login/login.service';
+import {StateStorageService} from '../../shared/auth/state-storage.service';
 
 @Component({
-  selector: 'jhi-signin',
-  templateUrl: './signin.component.html',
-  styles: []
+    selector: 'jhi-signin',
+    templateUrl: './signin.component.html',
+    styleUrls: [
+        '../../../content/scss/styles.scss'
+    ]
 })
 export class SigninComponent implements AfterViewInit {
 
@@ -18,14 +20,12 @@ export class SigninComponent implements AfterViewInit {
     username: string;
     credentials: any;
 
-    constructor(
-        private eventManager: JhiEventManager,
-        private loginService: LoginService,
-        private stateStorageService: StateStorageService,
-        private elementRef: ElementRef,
-        private renderer: Renderer,
-        private router: Router
-    ) {
+    constructor(private eventManager: JhiEventManager,
+                private loginService: LoginService,
+                private stateStorageService: StateStorageService,
+                private elementRef: ElementRef,
+                private renderer: Renderer,
+                private router: Router) {
         this.credentials = {};
     }
 
