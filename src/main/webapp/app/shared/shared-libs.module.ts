@@ -8,6 +8,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { CookieModule } from 'ngx-cookie';
 import {
     InputTextModule,
+    CheckboxModule,
     ButtonModule,
     MenuModule,
     DropdownModule,
@@ -34,6 +35,7 @@ import {
         InfiniteScrollModule,
         /*primeNG modules*/
         InputTextModule,
+        CheckboxModule,
         ButtonModule,
         MenuModule,
         DropdownModule,
