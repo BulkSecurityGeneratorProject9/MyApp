@@ -8,25 +8,33 @@
         </div>
         <div class="col-sm-8">
             <form class="form" role="form" (ngSubmit)="login()">
-
                 <div class="ui-inputgroup m-group">
                     <span class="ui-inputgroup-addon m-addon"><i class="fa fa-user"></i></span>
                     <input class="m-input" type="text" pInputText [(ngModel)]="username"
                            name="username" id="username"
                            placeholder="{{'global.form.username.placeholder' | translate}}">
                 </div>
-
                 <div class="ui-inputgroup m-group">
                     <span class="ui-inputgroup-addon m-addon"><i class="fa fa-lock"></i></span>
                     <input class="m-input" type="password" pInputText [(ngModel)]="password"
                            name="password" id="password"
                            placeholder="{{'login.form.password.placeholder' | translate}}">
                 </div>
+                <!--<div class="ui-inputgroup m-group">-->
+                    <!--<div class="form-check pull-left">-->
+                        <!--<label class="form-check-label" for="rememberMe">-->
+                            <!--<input class="form-check-input" type="checkbox" name="rememberMe" id="rememberMe"-->
+                                   <!--[(ngModel)]="rememberMe">-->
+                            <!--<span jhiTranslate="login.form.rememberme">Remember me</span>-->
+                        <!--</label>-->
+                    <!--</div>-->
+                <!--</div>-->
                 <div class="ui-inputgroup m-group">
-                    <div class="form-check pull-left">
-                        <label class="form-check-label" for="rememberMe">
-                            <input class="form-check-input" type="checkbox" name="rememberMe" id="rememberMe"
-                                   [(ngModel)]="rememberMe">
+                    <div class="pull-left">
+                        <label for="rememberMe">
+                            <p-checkbox name="rememberMe" id="rememberMe"
+                                        [(ngModel)]="rememberMe"
+                                        binary="true"></p-checkbox> &nbsp;
                             <span jhiTranslate="login.form.rememberme">Remember me</span>
                         </label>
                     </div>
