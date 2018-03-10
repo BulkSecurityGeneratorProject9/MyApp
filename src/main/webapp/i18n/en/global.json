@@ -47,7 +47,7 @@
             "info": {
                 "authenticated": {
                     "prefix": "Already a member? ",
-                    "link": "Log in",
+                    "link": "Sign in",
                     "suffix": ", you can try the default accounts:<br/>- Administrator (login=\"admin\" and password=\"admin\") <br/>- User (login=\"user\" and password=\"user\")."
                 },
                 "register": {
