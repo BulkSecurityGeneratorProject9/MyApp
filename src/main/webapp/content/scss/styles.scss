@@ -3,12 +3,28 @@
     padding: 0 0 10px 0;
 }
 
+.m-reg-group {
+    padding: 0 0 20px 0;
+    display: flex;
+}
+
 .m-addon {
     width: 50px;
+    height: 38px;
 }
 
 .m-input {
     width: 200px;
+    height: 38px;
+}
+
+.m-reg-input {
+    width: 250px;
+    height: 38px;
+}
+
+.l-reg-padding {
+    padding-left: 5px;
 }
 
 .m-button {
