@@ -8,7 +8,7 @@ import {Component, OnInit} from '@angular/core';
     ]
 })
 export class HomePageComponent implements OnInit {
-
+    isLogin = true;
     email: string;
     password: string;
 
@@ -16,5 +16,10 @@ export class HomePageComponent implements OnInit {
     }
 
     ngOnInit() {
+    }
+
+    onChange() {
+        this.isLogin = !this.isLogin;
+        this.isLogin ? console.log('login...') : console.log('register...');
     }
 }

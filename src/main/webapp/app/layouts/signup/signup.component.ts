@@ -1,10 +1,9 @@
-import { Component, OnInit, AfterViewInit, Renderer, ElementRef } from '@angular/core';
+import { Component, OnInit, AfterViewInit, Renderer, ElementRef, Output, EventEmitter } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
-import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { JhiLanguageService } from 'ng-jhipster';
 
 import { Register } from '../../account/register/register.service';
-import { LoginModalService, EMAIL_ALREADY_USED_TYPE, LOGIN_ALREADY_USED_TYPE } from '../../shared';
+import { EMAIL_ALREADY_USED_TYPE, LOGIN_ALREADY_USED_TYPE } from '../../shared';
 
 @Component({
   selector: 'jhi-signup',
@@ -14,7 +13,7 @@ import { LoginModalService, EMAIL_ALREADY_USED_TYPE, LOGIN_ALREADY_USED_TYPE } f
     ]
 })
 export class SignupComponent implements OnInit, AfterViewInit {
-
+    @Output() close = new EventEmitter<boolean>();
     confirmPassword: string;
     doNotMatch: string;
     error: string;
@@ -22,11 +21,9 @@ export class SignupComponent implements OnInit, AfterViewInit {
     errorUserExists: string;
     registerAccount: any;
     success: boolean;
-    modalRef: NgbModalRef;
 
     constructor(
         private languageService: JhiLanguageService,
-        private loginModalService: LoginModalService,
         private registerService: Register,
         private elementRef: ElementRef,
         private renderer: Renderer
@@ -60,7 +57,7 @@ export class SignupComponent implements OnInit, AfterViewInit {
     }
 
     openLogin() {
-        this.modalRef = this.loginModalService.open();
+        this.close.emit(true);
     }
 
     private processError(response: HttpErrorResponse) {

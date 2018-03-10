@@ -1,4 +1,4 @@
-import {Component, AfterViewInit, Renderer, ElementRef} from '@angular/core';
+import {Component, AfterViewInit, Renderer, ElementRef, Output, EventEmitter} from '@angular/core';
 import {Router} from '@angular/router';
 import {JhiEventManager} from 'ng-jhipster';
 
@@ -13,7 +13,7 @@ import {StateStorageService} from '../../shared/auth/state-storage.service';
     ]
 })
 export class SigninComponent implements AfterViewInit {
-
+    @Output() close = new EventEmitter<boolean>();
     authenticationError: boolean;
     password: string;
     rememberMe: boolean;
@@ -72,11 +72,11 @@ export class SigninComponent implements AfterViewInit {
     }
 
     register() {
-        this.router.navigate(['/register']);
+        this.close.emit(true);
     }
 
     requestResetPassword() {
-        this.router.navigate(['/reset', 'request']);
+        // this.router.navigate(['/reset', 'request']);
     }
 
 }

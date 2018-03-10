@@ -15,12 +15,16 @@
 <div class="login-body">
     <div id="login-wrapper">
         <div id="login-container">
-            <p-card title="{{'login.title' | translate}}">
-                <jhi-signin></jhi-signin>
-            </p-card>
-            <p-card title="{{'register.title' | translate}}">
-                <jhi-signup></jhi-signup>
-            </p-card>
+            <div *ngIf="isLogin; else register">
+                <p-card *ngIf="isLogin" title="{{'login.title' | translate}}">
+                    <jhi-signin (close)="onChange($event)"></jhi-signin>
+                </p-card>
+            </div>
+            <ng-template #register>
+                <p-card *ngIf="!isLogin" title="{{'register.title' | translate}}">
+                    <jhi-signup (close)="onChange($event)"></jhi-signup>
+                </p-card>
+            </ng-template>
         </div>
         <div class="login-footer">©2018 MyApp, Inc. All rights reserved.</div>
         <div class="login-footer-down"></div>
