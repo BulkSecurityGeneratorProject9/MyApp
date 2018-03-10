@@ -59,11 +59,18 @@
                         Forget your password?</a>
                 </small>
             </div>
-            <div class="alert alert-warning">
+            <div class="alert alert-danger">
                 <small>
                     <!--<span jhiTranslate="global.messages.info.register.noaccount">You don't have an account yet?</span>-->
                     <a class="alert-link" (click)="register()" jhiTranslate="global.messages.info.register.link">
-                        Register a new account
+                        Create a new account
+                    </a>
+                </small>
+            </div>
+            <div class="alert alert-info">
+                <small>
+                    <a class="alert-link" (click)="register()" jhiTranslate="global.messages.info.guest">
+                        Continue as a guest
                     </a>
                 </small>
             </div>
