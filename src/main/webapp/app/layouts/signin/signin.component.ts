@@ -16,7 +16,7 @@ export class SigninComponent implements AfterViewInit {
     @Output() close = new EventEmitter<boolean>();
     authenticationError: boolean;
     password: string;
-    rememberMe: boolean;
+    rememberMe = true;
     username: string;
     credentials: any;
 
