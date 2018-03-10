@@ -31,7 +31,7 @@
                 <!--</div>-->
                 <div class="ui-inputgroup m-group">
                     <div class="pull-left">
-                        <label for="rememberMe">
+                        <label for="rememberMe" (click)="rememberMe = !rememberMe">
                             <p-checkbox name="rememberMe" id="rememberMe"
                                         [(ngModel)]="rememberMe"
                                         binary="true"></p-checkbox> &nbsp;
