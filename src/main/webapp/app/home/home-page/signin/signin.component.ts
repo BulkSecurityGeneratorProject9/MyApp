@@ -1,4 +1,4 @@
-import {Component, AfterViewInit, Renderer, ElementRef, Output, EventEmitter} from '@angular/core';
+import {Component, AfterViewInit, Renderer, ElementRef, Output, EventEmitter, ViewEncapsulation} from '@angular/core';
 import {Router} from '@angular/router';
 import {JhiEventManager} from 'ng-jhipster';
 
@@ -10,7 +10,8 @@ import {StateStorageService} from '../../../shared/auth/state-storage.service';
     templateUrl: './signin.component.html',
     styleUrls: [
         '../../../../content/scss/styles.scss'
-    ]
+    ],
+    encapsulation: ViewEncapsulation.None
 })
 export class SigninComponent implements AfterViewInit {
     @Output() close = new EventEmitter<boolean>();
