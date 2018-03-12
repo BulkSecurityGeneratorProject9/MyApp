@@ -31,11 +31,11 @@
                 <!--</div>-->
                 <div class="ui-inputgroup m-group">
                     <div class="pull-left">
-                        <label for="rememberMe" (click)="rememberMe = !rememberMe">
+                        <label for="rememberMe">
                             <p-checkbox name="rememberMe" id="rememberMe"
                                         [(ngModel)]="rememberMe"
                                         binary="true"></p-checkbox>
-                            <span jhiTranslate="login.form.rememberme" style="font-size: .9em">Remember me</span>
+                            <span jhiTranslate="login.form.rememberme" style="font-size: .9em" (click)="rememberMe = !rememberMe">Remember me</span>
                         </label>
                     </div>
                 </div>
