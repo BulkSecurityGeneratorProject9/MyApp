@@ -79,4 +79,7 @@ export class SigninComponent implements AfterViewInit {
         // this.router.navigate(['/reset', 'request']);
     }
 
+    guest() {
+        this.router.navigate(['/user']);
+    }
 }
