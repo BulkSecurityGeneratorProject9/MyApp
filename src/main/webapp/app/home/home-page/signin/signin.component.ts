@@ -2,14 +2,14 @@ import {Component, AfterViewInit, Renderer, ElementRef, Output, EventEmitter} fr
 import {Router} from '@angular/router';
 import {JhiEventManager} from 'ng-jhipster';
 
-import {LoginService} from '../../shared/login/login.service';
-import {StateStorageService} from '../../shared/auth/state-storage.service';
+import {LoginService} from '../../../shared/login/login.service';
+import {StateStorageService} from '../../../shared/auth/state-storage.service';
 
 @Component({
     selector: 'jhi-signin',
     templateUrl: './signin.component.html',
     styleUrls: [
-        '../../../content/scss/styles.scss'
+        '../../../../content/scss/styles.scss'
     ]
 })
 export class SigninComponent implements AfterViewInit {

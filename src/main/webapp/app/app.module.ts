@@ -25,10 +25,7 @@ import {
     ProfileService,
     PageRibbonComponent,
     ActiveMenuDirective,
-    ErrorComponent,
-    HomePageComponent,
-    SigninComponent,
-    SignupComponent
+    ErrorComponent
 } from './layouts';
 
 @NgModule({
@@ -50,10 +47,7 @@ import {
         ErrorComponent,
         PageRibbonComponent,
         ActiveMenuDirective,
-        FooterComponent,
-        HomePageComponent,
-        SigninComponent,
-        SignupComponent
+        FooterComponent
     ],
     providers: [
         ProfileService,

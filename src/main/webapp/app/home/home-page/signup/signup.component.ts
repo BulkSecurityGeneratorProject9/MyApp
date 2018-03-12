@@ -2,14 +2,14 @@ import { Component, OnInit, AfterViewInit, Renderer, ElementRef, Output, EventEm
 import { HttpErrorResponse } from '@angular/common/http';
 import { JhiLanguageService } from 'ng-jhipster';
 
-import { Register } from '../../account/register/register.service';
-import { EMAIL_ALREADY_USED_TYPE, LOGIN_ALREADY_USED_TYPE } from '../../shared';
+import { Register } from '../../../account/register/register.service';
+import { EMAIL_ALREADY_USED_TYPE, LOGIN_ALREADY_USED_TYPE } from '../../../shared';
 
 @Component({
   selector: 'jhi-signup',
   templateUrl: './signup.component.html',
     styleUrls: [
-        '../../../content/scss/styles.scss'
+        '../../../../content/scss/styles.scss'
     ]
 })
 export class SignupComponent implements OnInit, AfterViewInit {
