@@ -1,17 +1,20 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {HomePageComponent} from "./home-page.component";
-import {SigninComponent} from "./signin/signin.component";
-import {SignupComponent} from "./signup/signup.component";
+import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import {MyAppSharedModule} from '../../shared';
+import {ROUTES} from './home-page.route';
+import {HomePageComponent} from './home-page.component';
+import {SigninComponent} from './signin/signin.component';
+import {SignupComponent} from './signup/signup.component';
 
 @NgModule({
     imports: [
-        CommonModule,
-        HomePageComponent,
-        SigninComponent,
-        SignupComponent
+        MyAppSharedModule,
+        ROUTES
     ],
-    declarations: []
+    declarations: [HomePageComponent,
+        SigninComponent,
+        SignupComponent],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
+
 export class HomePageModule {
 }
