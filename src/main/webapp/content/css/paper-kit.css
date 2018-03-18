@@ -5909,7 +5909,7 @@ textarea.form-control {
 }
 
 .title-brand {
-  max-width: 730px;
+  max-width: 800px;
   margin: 0 auto;
   position: relative;
   text-align: center;
@@ -5929,7 +5929,7 @@ textarea.form-control {
 }
 
 .presentation-title {
-  font-size: 8em;
+  font-size: 4em;
   font-weight: 700;
   margin: 0;
   color: #FFFFFF;
@@ -5955,8 +5955,8 @@ textarea.form-control {
   width: 100%;
   color: rgba(255, 255, 255, 0.5);
 }
-.category-absolute .creative-tim-logo {
-  max-width: 140px;
+.category-absolute .logo {
+  max-width: 30px;
   top: -2px;
   left: 3px;
   position: relative;
@@ -5986,7 +5986,7 @@ textarea.form-control {
 .moving-clouds {
   position: absolute;
   z-index: 1;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 250.625em;
   height: 43.75em;

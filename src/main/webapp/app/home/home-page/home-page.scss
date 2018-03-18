@@ -1,3 +1,11 @@
+.header-img {
+    background-image: url("../../../content/images/bg/New-York-1.jpg")
+}
+
+.moving-clouds-img {
+    background-image: url("../../../content/images/clouds.png")
+}
+
 .login-body {
     height: 100%;
     font-family: "latoregular", "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -6,7 +14,7 @@
     padding: 100px 0 0 0;
 
     //background-image: url("../../../content/images/city.jpg");
-    background-image: url("../../../content/images/New-York-2.jpg");
+    background-image: url("../../../content/images/bg/New-York-2.jpg");
     background-size: cover;
 
     //background-image: linear-gradient(to top, #6b77a1, #737ea5 3%, #9599b3 15%, #b1b0bf 28%, #c7c1c8 41%, #d6cdcf 57%, #dfd5d3 74%, #e2d7d4);
