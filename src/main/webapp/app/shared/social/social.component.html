@@ -1,8 +1,16 @@
+<!--<form ngNoForm action="{{ providerURL }}" method="POST">-->
+    <!--<button type="submit" class="btn btn-block jh-btn-social jh-btn-{{ provider }}">-->
+        <!--&lt;!&ndash;<span jhiTranslate="social.btnLabel" translateValues="{ label: '{{label}}' }">Sign in with {{ label }}</span>&ndash;&gt;-->
+        <!--<span class="fa fa-{{ provider }}"></span>-->
+    <!--</button>-->
+    <!--<input name="scope" type="hidden" value="{{ providerSetting }}"/>-->
+    <!--<input name="_csrf" type="hidden" value="{{ csrf }}"/>-->
+<!--</form>-->
+
 <form ngNoForm action="{{ providerURL }}" method="POST">
-    <button type="submit" class="btn btn-block jh-btn-social jh-btn-{{ provider }}">
-        <!--<span jhiTranslate="social.btnLabel" translateValues="{ label: '{{label}}' }">Sign in with {{ label }}</span>-->
-        <span class="fa fa-{{ provider }}"></span>
-    </button>
+    <a href="" class="btn btn-neutral btn-{{ provider }} btn-just-icon">
+        <i class="fas fa-{{ provider }}"></i>
+    </a>
     <input name="scope" type="hidden" value="{{ providerSetting }}"/>
     <input name="_csrf" type="hidden" value="{{ csrf }}"/>
 </form>
