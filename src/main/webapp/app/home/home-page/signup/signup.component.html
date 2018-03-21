@@ -1,5 +1,5 @@
 <div class="card card-register">
-    <h3 class="title">Welcome</h3>
+    <h3 class="title">Registration</h3>
     <!--<div class="row justify-content-center">-->
         <!--<div class="col-md-12">-->
             <div class="alert alert-success" *ngIf="success" jhiTranslate="register.messages.success">
@@ -44,7 +44,7 @@
                            id="email" name="email" #email="ngModel"
                            minlength=5 maxlength=100 email required>
                 </div>
-                <label for="password" jhiTranslate="global.form.newpassword">New password</label>
+                <label for="password" jhiTranslate="global.form.newpassword">password</label>
                 <div class="input-group form-group-no-border">
                       <span class="input-group-addon">
                         <i class="fas fa-key"></i>
@@ -205,8 +205,8 @@
         <!--</div>-->
     <!--</div>-->
 </div>
-<div class="col text-center" routerLinkActive="active">
-    <div class="btn btn-outline-neutral btn-round btn-lg"><span jhiTranslate="global.messages.info.authenticated.prefix">Already a member?</span>
-        <a class="alert-link" (click)="openLogin()" jhiTranslate="global.messages.info.authenticated.link">sign
-            in</a></div>
+<div class="col text-center">
+    <div class="btn btn-outline-neutral btn-round btn-lg"  (click)="openLogin()" >
+        <span jhiTranslate="global.messages.info.authenticated.prefix">Already a member?</span>
+        <a class="alert-link" jhiTranslate="global.messages.info.authenticated.link">sign in</a></div>
 </div>

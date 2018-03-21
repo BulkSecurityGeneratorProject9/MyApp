@@ -8,7 +8,7 @@ import {Component, OnInit} from '@angular/core';
     ]
 })
 export class HomePageComponent implements OnInit {
-    isLogin = false;
+    isLogin = true;
     email: string;
     password: string;
 
