@@ -2551,7 +2551,7 @@ textarea.form-control {
   border-radius: 12px;
   box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
   background-color: #FFFFFF;
-  color: #333333;
+  /*color: #333333;*/
   margin-bottom: 20px;
   position: relative;
   z-index: 1;

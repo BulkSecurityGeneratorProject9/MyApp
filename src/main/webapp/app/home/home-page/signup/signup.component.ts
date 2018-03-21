@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, Renderer, ElementRef, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Renderer, ElementRef, Output, EventEmitter } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { JhiLanguageService } from 'ng-jhipster';
 
@@ -12,7 +12,7 @@ import { EMAIL_ALREADY_USED_TYPE, LOGIN_ALREADY_USED_TYPE } from '../../../share
         '../../../../content/scss/styles.scss'
     ]
 })
-export class SignupComponent implements OnInit, AfterViewInit {
+export class SignupComponent implements OnInit {
     @Output() close = new EventEmitter<boolean>();
     confirmPassword: string;
     doNotMatch: string;
@@ -33,10 +33,6 @@ export class SignupComponent implements OnInit, AfterViewInit {
     ngOnInit() {
         this.success = false;
         this.registerAccount = {};
-    }
-
-    ngAfterViewInit() {
-        this.renderer.invokeElementMethod(this.elementRef.nativeElement.querySelector('#login'), 'focus', []);
     }
 
     register() {
