@@ -26,15 +26,15 @@
     <!--<div class="row justify-content-center">-->
         <!--<div class="col-md-8">-->
             <form class="register-form" name="form" role="form" (ngSubmit)="register()" #registerForm="ngForm" *ngIf="!success">
-                <label for="login" jhiTranslate="global.form.username">Username</label>
-                <div class="input-group form-group-no-border">
-                    <span class="input-group-addon">
-                        <i class="fas fa-user"></i>
-                    </span>
-                    <input type="text" class="form-control" id="login" name="login" #login="ngModel"
-                           [(ngModel)]="registerAccount.login"
-                           required minlength="1" maxlength="50" pattern="^[_'.@A-Za-z0-9-]*$">
-                </div>
+                <!--<label for="login" jhiTranslate="global.form.username">Username</label>-->
+                <!--<div class="input-group form-group-no-border">-->
+                    <!--<span class="input-group-addon">-->
+                        <!--<i class="fas fa-user"></i>-->
+                    <!--</span>-->
+                    <!--<input type="text" class="form-control" id="login" name="login" #login="ngModel"-->
+                           <!--[(ngModel)]="registerAccount.login"-->
+                           <!--required minlength="1" maxlength="50" pattern="^[_'.@A-Za-z0-9-]*$">-->
+                <!--</div>-->
                 <label for="email" jhiTranslate="global.form.email">Email</label>
                 <div class="input-group form-group-no-border">
                     <span class="input-group-addon">
@@ -53,15 +53,17 @@
                            id="password" name="password" #password="ngModel"
                            minlength=4 maxlength=50 required>
                 </div>
-                <label for="confirmPassword" jhiTranslate="global.form.confirmpassword">New password confirmation</label>
-                <div class="input-group form-group-no-border">
-                    <span class="input-group-addon">
-                        <i class="fas fa-key"></i>
-                    </span>
-                    <input class="form-control" type="password" [(ngModel)]="confirmPassword"
-                           id="confirmPassword" name="confirmPassword" #confirmPasswordInput="ngModel"
-                           minlength=4 maxlength=50 required>
-                </div>
+                <!--<label for="confirmPassword" jhiTranslate="global.form.confirmpassword">New password confirmation</label>-->
+                <!--<div class="input-group form-group-no-border">-->
+                    <!--<span class="input-group-addon">-->
+                        <!--<i class="fas fa-key"></i>-->
+                    <!--</span>-->
+                    <!--<input class="form-control" type="password" [(ngModel)]="confirmPassword"-->
+                           <!--id="confirmPassword" name="confirmPassword" #confirmPasswordInput="ngModel"-->
+                           <!--minlength=4 maxlength=50 required>-->
+                <!--</div>-->
+
+
                 <!--<div class="">-->
                     <!--<span class="">-->
                         <!--<input class="m-reg-input" type="text" pInputText [(ngModel)]="registerAccount.login"-->
