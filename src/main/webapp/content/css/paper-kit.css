@@ -182,9 +182,9 @@ blockquote small {
 }
 
 .title {
-  margin-top: 30px;
-  margin-bottom: 25px;
-  min-height: 32px;
+  margin-top: 5px;
+  margin-bottom: 8px;
+  min-height: 18px;
 }
 
 .title.text-center {

@@ -7,9 +7,11 @@
     <!--<input name="_csrf" type="hidden" value="{{ csrf }}"/>-->
 <!--</form>-->
 
-<form ngNoForm action="{{ providerURL }}" method="POST">
+<form action="{{ providerURL }}" method="POST">
     <a href="" class="btn btn-neutral btn-{{ provider }} btn-just-icon">
-        <i class="fas fa-{{ provider }}"></i>
+        <i *ngIf="provider == 'google'" class="fa fa-google-plus-g"></i>
+        <i *ngIf="provider == 'facebook'" class="fa fa-facebook-square"></i>
+        <i *ngIf="provider == 'twitter'" class="fa fa-twitter"></i>
     </a>
     <input name="scope" type="hidden" value="{{ providerSetting }}"/>
     <input name="_csrf" type="hidden" value="{{ csrf }}"/>

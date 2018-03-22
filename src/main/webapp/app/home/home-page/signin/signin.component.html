@@ -2,9 +2,16 @@
     <h3 class="title">Sign In</h3>
     <!--<div class="row justify-content-center">-->
     <!--<div class="col-sm-12">-->
-    <div class="alert alert-danger" *ngIf="authenticationError"
-         jhiTranslate="login.messages.error.authentication">
-        <strong>Failed to sign in!</strong> Please check your credentials and try again.
+    <div class="row justify-content-center" style="display: inherit">
+        <jhi-social provider="google"></jhi-social>
+        <jhi-social provider="facebook"></jhi-social>
+        <jhi-social provider="twitter"></jhi-social>
+    </div>
+    <div style="margin-top: 10px">
+        <div class="alert alert-danger" *ngIf="authenticationError"
+             jhiTranslate="login.messages.error.authentication">
+            <strong>Failed to sign in!</strong> Please check your credentials and try again.
+        </div>
     </div>
     <!--</div>-->
     <!--<div class="col-sm-8">-->
@@ -13,7 +20,7 @@
         <label for="email" jhiTranslate="global.form.email">Email</label>
         <div class="input-group form-group-no-border">
                     <span class="input-group-addon">
-                        <i class="fas fa-envelope"></i>
+                        <i class="fa fa-envelope"></i>
                     </span>
             <input class="form-control" type="email" [(ngModel)]="username"
                    id="email" name="email"
@@ -22,7 +29,7 @@
         <label for="password" jhiTranslate="global.form.newpassword">Password</label>
         <div class="input-group form-group-no-border">
                     <span class="input-group-addon">
-                        <i class="fas fa-key"></i>
+                        <i class="fa fa-key"></i>
                     </span>
             <input class="form-control" type="password" [(ngModel)]="password"
                    id="password" name="password"
@@ -81,21 +88,21 @@
             Forgot your password?</a>
     </div>
     <!--<div class="forgot">-->
-        <!--<a class="btn btn-link btn-info" (click)="guest()" jhiTranslate="global.messages.info.guest">-->
-            <!--Continue as a guest</a>-->
+    <!--<a class="btn btn-link btn-info" (click)="guest()" jhiTranslate="global.messages.info.guest">-->
+    <!--Continue as a guest</a>-->
     <!--</div>-->
     <!--<div class="alert alert-warning m-alert">-->
-        <!--<small>-->
-            <!--<a class="alert-link" (click)="requestResetPassword()" jhiTranslate="login.password.forgot">-->
-                <!--Forget your password?</a>-->
-        <!--</small>-->
+    <!--<small>-->
+    <!--<a class="alert-link" (click)="requestResetPassword()" jhiTranslate="login.password.forgot">-->
+    <!--Forget your password?</a>-->
+    <!--</small>-->
     <!--</div>-->
     <!--<div class="alert alert-info m-alert">-->
-        <!--<small>-->
-            <!--<a class="alert-link" (click)="guest()" jhiTranslate="global.messages.info.guest">-->
-                <!--Continue as a guest-->
-            <!--</a>-->
-        <!--</small>-->
+    <!--<small>-->
+    <!--<a class="alert-link" (click)="guest()" jhiTranslate="global.messages.info.guest">-->
+    <!--Continue as a guest-->
+    <!--</a>-->
+    <!--</small>-->
     <!--</div>-->
     <!--</div>-->
     <!--</div>-->
