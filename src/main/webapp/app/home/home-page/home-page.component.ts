@@ -18,6 +18,7 @@ export class HomePageComponent implements OnInit {
             if (s instanceof NavigationEnd) {
                 const tree = router.parseUrl(router.url);
                 if (tree.fragment) {
+                    this.isLogin = tree.fragment !== 'register';
                     const element = document.querySelector('#' + tree.fragment);
                     if (element) {
                         element.scrollIntoView(true);
