@@ -2,11 +2,11 @@ import {Component, OnInit, HostListener} from '@angular/core';
 import {Router} from '@angular/router';
 import {NgbModalRef} from '@ng-bootstrap/ng-bootstrap';
 import {JhiLanguageService} from 'ng-jhipster';
-
 import {ProfileService} from '../profiles/profile.service';
 import {JhiLanguageHelper, Principal, LoginModalService, LoginService} from '../../shared';
 
 import {VERSION} from '../../app.constants';
+import {UserTypeService} from '../../shared/user/userType.service';
 
 @Component({
     selector: 'jhi-navbar',
@@ -28,15 +28,20 @@ export class NavbarComponent implements OnInit {
     currPos: Number = 0;
     changePos: Number = 100;
 
+    userType: string;
+
     constructor(private loginService: LoginService,
                 private languageService: JhiLanguageService,
                 private languageHelper: JhiLanguageHelper,
                 private principal: Principal,
                 private loginModalService: LoginModalService,
+                private userTypeService: UserTypeService,
                 private profileService: ProfileService,
                 private router: Router) {
         this.version = VERSION ? 'v' + VERSION : '';
         this.isNavbarCollapsed = true;
+
+        this.userTypeService.getType().subscribe((type) => this.userType = type);
     }
 
     ngOnInit() {

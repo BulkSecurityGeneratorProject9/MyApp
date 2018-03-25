@@ -4,6 +4,7 @@ import {JhiEventManager} from 'ng-jhipster';
 
 import {LoginService} from '../../../shared/login/login.service';
 import {StateStorageService} from '../../../shared/auth/state-storage.service';
+import {UserTypeService} from '../../../shared/user/userType.service';
 
 @Component({
     selector: 'jhi-signin',
@@ -24,6 +25,7 @@ export class SigninComponent implements AfterViewInit {
     constructor(private eventManager: JhiEventManager,
                 private loginService: LoginService,
                 private stateStorageService: StateStorageService,
+                private userTypeService: UserTypeService,
                 private elementRef: ElementRef,
                 private renderer: Renderer,
                 private router: Router) {
@@ -81,6 +83,7 @@ export class SigninComponent implements AfterViewInit {
     }
 
     guest() {
+        this.userTypeService.setType('guest');
         this.router.navigate(['/user']);
     }
 }

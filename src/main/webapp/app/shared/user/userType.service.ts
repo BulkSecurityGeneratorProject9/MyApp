@@ -1,16 +1,16 @@
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
-import {BehaviorSubject} from "rxjs/Rx";
+import {BehaviorSubject} from 'rxjs/Rx';
 
 @Injectable()
 export class UserTypeService {
-    private _type: BehaviorSubject<string> = new BehaviorSubject();
+    private _type: BehaviorSubject<string> = new BehaviorSubject(null);
 
-    get type() : Observable {
+    getType(): Observable<any> {
         return this._type.asObservable();
     }
-    
-    set type(type: string) {
+
+    setType(type: string) {
         this._type.next(type);
     }
 }

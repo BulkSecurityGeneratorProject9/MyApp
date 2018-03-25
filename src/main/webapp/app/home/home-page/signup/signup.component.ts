@@ -1,13 +1,15 @@
-import { Component, OnInit, Renderer, ElementRef, Output, EventEmitter } from '@angular/core';
-import { HttpErrorResponse } from '@angular/common/http';
-import { JhiLanguageService } from 'ng-jhipster';
-
-import { Register } from '../../../account/register/register.service';
-import { EMAIL_ALREADY_USED_TYPE, LOGIN_ALREADY_USED_TYPE } from '../../../shared';
+import {Component, OnInit, Renderer, ElementRef, Output, EventEmitter} from '@angular/core';
+import {HttpErrorResponse} from '@angular/common/http';
+import {JhiLanguageService} from 'ng-jhipster';
+import {StateStorageService} from '../../../shared/auth/state-storage.service';
+import {Register} from '../../../account/register/register.service';
+import {EMAIL_ALREADY_USED_TYPE, LOGIN_ALREADY_USED_TYPE} from '../../../shared';
+import {Router} from '@angular/router';
+import {UserTypeService} from '../../../shared/user/userType.service';
 
 @Component({
-  selector: 'jhi-signup',
-  templateUrl: './signup.component.html',
+    selector: 'jhi-signup',
+    templateUrl: './signup.component.html',
     styleUrls: [
         '../../../../content/scss/styles.scss'
     ]
@@ -22,12 +24,13 @@ export class SignupComponent implements OnInit {
     registerAccount: any;
     success: boolean;
 
-    constructor(
-        private languageService: JhiLanguageService,
-        private registerService: Register,
-        private elementRef: ElementRef,
-        private renderer: Renderer
-    ) {
+    constructor(private languageService: JhiLanguageService,
+                private registerService: Register,
+                private stateStorageService: StateStorageService,
+                private userTypeService: UserTypeService,
+                private elementRef: ElementRef,
+                private renderer: Renderer,
+                private router: Router) {
     }
 
     ngOnInit() {
@@ -54,6 +57,11 @@ export class SignupComponent implements OnInit {
 
     openLogin() {
         this.close.emit(true);
+    }
+
+    guest() {
+        this.userTypeService.setType('guest');
+        this.router.navigate(['/user']);
     }
 
     private processError(response: HttpErrorResponse) {
