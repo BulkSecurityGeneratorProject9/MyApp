@@ -2148,9 +2148,9 @@ textarea.form-control {
   height: 50px;
 }
 
-.navbar.fixed-top .nav-link i {
-  top: 4px;
-}
+/*.navbar.fixed-top .nav-link i {*/
+  /*top: 4px;*/
+/*}*/
 
 .navbar-absolute {
   position: absolute;
@@ -3202,7 +3202,7 @@ textarea.form-control {
   text-align: center;
 }
 .dropdown-menu .dropdown-item {
-  padding: 0 !important;
+    padding: 5px 25px 5px 15px !important;
 }
 .dropdown-menu .dropdown-item a {
   color: #66615b;

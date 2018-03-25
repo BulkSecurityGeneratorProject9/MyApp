@@ -40,10 +40,10 @@ export class NavbarComponent implements OnInit {
     }
 
     ngOnInit() {
-        // this.languageHelper.getAll().then((languages) => {
-        //     this.languages = languages;
-        // });
-        //
+        this.languageHelper.getAll().then((languages) => {
+            this.languages = languages;
+        });
+
         // this.profileService.getProfileInfo().then((profileInfo) => {
         //     this.inProduction = profileInfo.inProduction;
         //     this.swaggerEnabled = profileInfo.swaggerEnabled;
