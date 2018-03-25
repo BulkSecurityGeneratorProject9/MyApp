@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Router, NavigationEnd} from '@angular/router';
 
 @Component({
     selector: 'jhi-home-page',
@@ -12,7 +13,20 @@ export class HomePageComponent implements OnInit {
     email: string;
     password: string;
 
-    constructor() {
+    constructor(router: Router) {
+        router.events.subscribe((s) => {
+            if (s instanceof NavigationEnd) {
+                const tree = router.parseUrl(router.url);
+                if (tree.fragment) {
+                    const element = document.querySelector('#' + tree.fragment);
+                    if (element) {
+                        element.scrollIntoView(true);
+                    }
+                } else {
+                    window.scrollTo(0, 0);
+                }
+            }
+        });
     }
 
     ngOnInit() {
