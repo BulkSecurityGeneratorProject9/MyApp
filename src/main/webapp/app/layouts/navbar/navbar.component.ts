@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, HostListener} from '@angular/core';
 import {Router} from '@angular/router';
 import {NgbModalRef} from '@ng-bootstrap/ng-bootstrap';
 import {JhiLanguageService} from 'ng-jhipster';
@@ -13,10 +13,7 @@ import {VERSION} from '../../app.constants';
     templateUrl: './navbar.component.html',
     styleUrls: [
         'navbar.scss'
-    ],
-    host: {
-        '(window:scroll)': 'onScroll($event)'
-    }
+    ]
 })
 
 export class NavbarComponent implements OnInit {
@@ -53,9 +50,9 @@ export class NavbarComponent implements OnInit {
         // });
     }
 
-    onScroll(evt) {
-        // window object can be wrapped as a service and then be imported here
-        this.currPos = (window.pageYOffset || evt.target.scrollTop) - (evt.target.clientTop || 0);
+    @HostListener('window:scroll', ['$event.target'])
+    onScroll(target) {
+        this.currPos = (window.pageYOffset || target.scrollTop) - (target.clientTop || 0);
         this.isScrolled = this.currPos >= this.changePos;
     }
 
