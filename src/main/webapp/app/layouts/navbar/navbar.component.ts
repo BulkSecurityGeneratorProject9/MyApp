@@ -1,4 +1,4 @@
-import {Component, OnInit, HostListener} from '@angular/core';
+import {Component, OnInit, HostListener, ChangeDetectorRef, OnDestroy} from '@angular/core';
 import {Router} from '@angular/router';
 import {NgbModalRef} from '@ng-bootstrap/ng-bootstrap';
 import {JhiLanguageService} from 'ng-jhipster';
@@ -16,7 +16,7 @@ import {UserTypeService} from '../../shared/user/userType.service';
     ]
 })
 
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, OnDestroy {
     inProduction: boolean;
     isNavbarCollapsed: boolean;
     languages: any[];
@@ -29,6 +29,7 @@ export class NavbarComponent implements OnInit {
     changePos: Number = 100;
 
     userType: string;
+    userTypeSubscribe: any;
 
     constructor(private loginService: LoginService,
                 private languageService: JhiLanguageService,
@@ -37,11 +38,10 @@ export class NavbarComponent implements OnInit {
                 private loginModalService: LoginModalService,
                 private userTypeService: UserTypeService,
                 private profileService: ProfileService,
+                private cdr: ChangeDetectorRef,
                 private router: Router) {
         this.version = VERSION ? 'v' + VERSION : '';
         this.isNavbarCollapsed = true;
-
-        this.userTypeService.getType().subscribe((type) => this.userType = type);
     }
 
     ngOnInit() {
@@ -53,6 +53,11 @@ export class NavbarComponent implements OnInit {
         //     this.inProduction = profileInfo.inProduction;
         //     this.swaggerEnabled = profileInfo.swaggerEnabled;
         // });
+
+        this.userTypeSubscribe = this.userTypeService.getType().subscribe((type) => {
+           this.userType = type;
+           this.cdr.detectChanges();
+        });
     }
 
     @HostListener('window:scroll', ['$event.target'])
@@ -89,5 +94,11 @@ export class NavbarComponent implements OnInit {
 
     getImageUrl() {
         return this.isAuthenticated() ? this.principal.getImageUrl() : null;
+    }
+
+    ngOnDestroy() {
+        if (this.userTypeSubscribe) {
+            this.userTypeSubscribe.unsubscribe();
+        }
     }
 }
