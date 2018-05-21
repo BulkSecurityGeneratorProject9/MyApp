@@ -15,15 +15,19 @@
     </div>
     <!--</div>-->
     <!--<div class="col-sm-8">-->
-    <form class="register-form" role="form" (ngSubmit)="login()" #signinForm="ngForm">
+    <form class="register-form" role="form" (ngSubmit)="handleSubmit($event)" #signinForm="ngForm">
 
         <label for="email" jhiTranslate="global.form.email">Email</label>
         <div class="input-group form-group-no-border">
                     <span class="input-group-addon">
                         <i class="far fa-envelope"></i>
                     </span>
-            <input class="form-control" type="email" [(ngModel)]="username"
+            <input class="form-control" type="text" [(ngModel)]="username"
                    id="email" name="email"
+                   (change)="handleChange($event)"
+                   (keypress)="handleKeyPress($event)"
+                   (focus)="onFocus($event)"
+                   (blur)="onBlur($event)"
                    minlength=5 maxlength=100 email required>
         </div>
         <label for="password" jhiTranslate="global.form.newpassword">Password</label>
