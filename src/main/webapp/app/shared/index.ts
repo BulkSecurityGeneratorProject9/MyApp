@@ -1,5 +1,6 @@
 export * from './constants/error.constants';
 export * from './constants/pagination.constants';
+export * from './constants/email-validation.constants'
 export * from './alert/alert.component';
 export * from './alert/alert-error.component';
 export * from './auth/csrf.service';
@@ -24,6 +25,7 @@ export * from './model/request-util';
 export * from './model/base-entity';
 export * from './social/social.service';
 export * from './social/social.component';
+export * from './algorithm/trie';
 export * from './shared-libs.module';
 export * from './shared-common.module';
 export * from './shared.module';
