@@ -114,6 +114,7 @@ export class SigninComponent implements AfterViewInit {
         console.log('input change...');
         this.email = e.target.value;
         this.validate = false;
+        this.error = '';
     }
 
     handleSubmit(e) {
@@ -211,7 +212,7 @@ export class SigninComponent implements AfterViewInit {
         //         console.log('You are using Kickbox\'s sandbox API: all email => 'result':'deliverable'');
         //     })
         //     .catch(error => console.error('Error:', error));
-        // return true;
+        return true;
     }
 
     setError(msg) {
