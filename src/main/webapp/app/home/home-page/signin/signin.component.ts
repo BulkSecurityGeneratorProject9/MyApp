@@ -170,16 +170,10 @@ export class SigninComponent implements AfterViewInit {
         this.email = e.target.value;
     }
 
-    onFocus(e) {
-        let form = e.target.parentElement;
-        form.className += ' active';
-        form.blur();
-    }
-
-    onBlur(e) {
-        if (this.email === '') {
-            e.target.parentElement.className = 'form-group';
+    onFocusOut(e) {
+        if (this.validation() && this.deliverable()) {
             this.error = '';
+            this.validate = true;
         }
     }
 
@@ -225,5 +219,4 @@ export class SigninComponent implements AfterViewInit {
         this.error = INVALID_EMAIL + ': ' + msg;
         return false;
     }
-
 }

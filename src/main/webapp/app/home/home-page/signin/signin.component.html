@@ -12,6 +12,9 @@
              jhiTranslate="login.messages.error.authentication">
             <strong>Failed to sign in!</strong> Please check your credentials and try again.
         </div>
+        <div class="alert alert-danger" *ngIf="error != null && error.length > 0">
+            <strong>{{error}}</strong>.
+        </div>
     </div>
     <!--</div>-->
     <!--<div class="col-sm-8">-->
@@ -26,8 +29,7 @@
                    id="email" name="email"
                    (change)="handleChange($event)"
                    (keypress)="handleKeyPress($event)"
-                   (focus)="onFocus($event)"
-                   (blur)="onBlur($event)"
+                   (focusout)="onFocusOut($event)"
                    minlength=5 maxlength=100 email required>
         </div>
         <label for="password" jhiTranslate="global.form.newpassword">Password</label>
@@ -73,7 +75,7 @@
                 <span class="form-check-sign"></span>
             </label>
         </div>
-        <button class="btn btn-danger btn-block btn-round" type="submit" jhiTranslate="login.form.button">Sign in
+        <button class="btn btn-danger btn-block btn-round" type="submit" [disabled]="!validate" jhiTranslate="login.form.button">Sign in
         </button>
     </form>
     <!--</div>-->
