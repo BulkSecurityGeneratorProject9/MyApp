@@ -1,7 +1,7 @@
 {
     "health": {
         "title": "Diagnostics",
-        "refresh.button": "Rafraichir",
+        "refresh.button": "Rafraîchir",
         "stacktrace": "Stacktrace",
         "details": {
             "details": "Détails",
@@ -11,6 +11,10 @@
             "error": "Erreur"
         },
         "indicator": {
+            "discoveryComposite": "Discovery Composite",
+            "refreshScope": "Microservice Refresh Scope",
+            "configServer": "Microservice Config Server",
+            "hystrix": "Hystrix",
             "diskSpace": "Espace disque",
             "mail": "Email",
             "elasticsearch": "Elasticsearch",
@@ -18,9 +22,10 @@
         },
         "table": {
             "service": "Nom du service",
-            "status": "Etat"
+            "status": "État"
         },
         "status": {
+            "UNKNOWN": "INCONNU",
             "UP": "DISPONIBLE",
             "DOWN": "HORS SERVICE"
         }

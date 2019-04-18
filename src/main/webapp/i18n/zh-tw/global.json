@@ -1,7 +1,8 @@
 {
     "global": {
         "title": "MyApp",
-        "browsehappy": "您的瀏覽器已經<strong>過時</strong>，建議您<a href=\"http://browsehappy.com/?locale=en\">升級瀏覽器</a>，以便有更好的體驗。",
+        "browsehappy":
+            "您的瀏覽器已經<strong>過時</strong>，建議您<a href=\"http://browsehappy.com/?locale=en\">升級瀏覽器</a>，以便有更好的體驗。",
         "menu": {
             "home": "首頁",
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
@@ -36,6 +37,8 @@
         "form": {
             "username": "帳號",
             "username.placeholder": "您的帳號",
+            "currentpassword": "Current password",
+            "currentpassword.placeholder": "Current password",
             "newpassword": "新密碼",
             "newpassword.placeholder": "您的新密碼",
             "confirmpassword": "新密碼確認",
@@ -48,7 +51,8 @@
                 "authenticated": {
                     "prefix": "如果您要",
                     "link": "登入",
-                    "suffix": "，可以使用預設帳號:<br/>- 管理員 (帳號是 \"admin\"，密碼是 \"admin\") <br/>- 使用者 (帳號 \"user\"，密碼是 \"user\")。"
+                    "suffix":
+                        "，可以使用預設帳號:<br/>- 管理員 (帳號是 \"admin\"，密碼是 \"admin\") <br/>- 使用者 (帳號 \"user\"，密碼是 \"user\")。"
                 },
                 "register": {
                     "noaccount": "還沒有帳號嗎?",
@@ -56,7 +60,7 @@
                 }
             },
             "error": {
-                "dontmatch" : "您輸入的兩次密碼不一致!"
+                "dontmatch": "您輸入的兩次密碼不一致!"
             },
             "validate": {
                 "newpassword": {
@@ -79,10 +83,10 @@
             }
         },
         "field": {
-            "id" : "ID"
+            "id": "ID"
         },
         "ribbon": {
-            "dev":"開發環境"
+            "dev": "開發環境"
         },
         "item-count": "顯示第 {{first}} 至 {{second}} 筆，共 {{total}} 筆。"
     },
@@ -126,7 +130,8 @@
         "Size": "欄位 {{fieldName}} 不符合大小需求!",
         "userexists": "登入帳號名稱已被使用!",
         "emailexists": "電子郵件地址已被使用!",
-        "idexists": "新實體不能包含 ID"
+        "idexists": "新實體不能包含 ID",
+        "idnull": "Invalid ID"
     },
     "footer": "這裡是您的頁尾"
 }
