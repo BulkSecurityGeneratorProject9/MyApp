@@ -36,6 +36,8 @@
         "form": {
             "username": "账号",
             "username.placeholder": "您的账号",
+            "currentpassword": "当前密码",
+            "currentpassword.placeholder": "您的当前密码",
             "newpassword": "新密码",
             "newpassword.placeholder": "您的新密码",
             "confirmpassword": "新密码确认",
@@ -56,7 +58,7 @@
                 }
             },
             "error": {
-                "dontmatch" : "您输入的密码和确认密码不匹配!"
+                "dontmatch": "您输入的密码和确认密码不匹配!"
             },
             "validate": {
                 "newpassword": {
@@ -79,10 +81,10 @@
             }
         },
         "field": {
-            "id" : "ID"
+            "id": "ID"
         },
         "ribbon": {
-            "dev":"Development"
+            "dev": "Development"
         },
         "item-count": "显示第 {{first}} - {{second}} 条，共 {{total}} 条"
     },
@@ -126,7 +128,8 @@
         "Size": "域 {{fieldName}} 不满足最大/最小值限制!",
         "userexists": "该用户名已存在!",
         "emailexists": "该邮箱已被使用!",
-        "idexists": "新建的 {{entityName}} 不能包含ID"
+        "idexists": "新建的 {{entityName}} 不能包含ID",
+        "idnull": "Invalid ID"
     },
     "footer": "这里是页脚"
 }

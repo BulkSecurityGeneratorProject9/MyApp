@@ -1,22 +1,19 @@
-import {Component, OnInit, HostListener, ChangeDetectorRef, OnDestroy} from '@angular/core';
-import {Router} from '@angular/router';
-import {NgbModalRef} from '@ng-bootstrap/ng-bootstrap';
-import {JhiLanguageService} from 'ng-jhipster';
-import {ProfileService} from '../profiles/profile.service';
-import {JhiLanguageHelper, Principal, LoginModalService, LoginService} from '../../shared';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
+import { JhiLanguageService } from 'ng-jhipster';
+import { SessionStorageService } from 'ngx-webstorage';
 
-import {VERSION} from '../../app.constants';
-import {UserTypeService} from '../../shared/user/userType.service';
+import { VERSION } from 'app/app.constants';
+import { JhiLanguageHelper, AccountService, LoginModalService, LoginService } from 'app/core';
+import { ProfileService } from 'app/layouts/profiles/profile.service';
 
 @Component({
     selector: 'jhi-navbar',
     templateUrl: './navbar.component.html',
-    styleUrls: [
-        'navbar.scss'
-    ]
+    styleUrls: ['navbar.scss']
 })
-
-export class NavbarComponent implements OnInit, OnDestroy {
+export class NavbarComponent implements OnInit {
     inProduction: boolean;
     isNavbarCollapsed: boolean;
     languages: any[];
@@ -24,49 +21,33 @@ export class NavbarComponent implements OnInit, OnDestroy {
     modalRef: NgbModalRef;
     version: string;
 
-    isScrolled = false;
-    currPos: Number = 0;
-    changePos: Number = 100;
-
-    userType: string;
-    userTypeSubscribe: any;
-
-    constructor(private loginService: LoginService,
-                private languageService: JhiLanguageService,
-                private languageHelper: JhiLanguageHelper,
-                private principal: Principal,
-                private loginModalService: LoginModalService,
-                private userTypeService: UserTypeService,
-                private profileService: ProfileService,
-                private cdr: ChangeDetectorRef,
-                private router: Router) {
+    constructor(
+        private loginService: LoginService,
+        private languageService: JhiLanguageService,
+        private languageHelper: JhiLanguageHelper,
+        private sessionStorage: SessionStorageService,
+        private accountService: AccountService,
+        private loginModalService: LoginModalService,
+        private profileService: ProfileService,
+        private router: Router
+    ) {
         this.version = VERSION ? 'v' + VERSION : '';
         this.isNavbarCollapsed = true;
     }
 
     ngOnInit() {
-        this.languageHelper.getAll().then((languages) => {
+        this.languageHelper.getAll().then(languages => {
             this.languages = languages;
         });
 
-        // this.profileService.getProfileInfo().then((profileInfo) => {
-        //     this.inProduction = profileInfo.inProduction;
-        //     this.swaggerEnabled = profileInfo.swaggerEnabled;
-        // });
-
-        this.userTypeSubscribe = this.userTypeService.getType().subscribe((type) => {
-           this.userType = type;
-           this.cdr.detectChanges();
+        this.profileService.getProfileInfo().then(profileInfo => {
+            this.inProduction = profileInfo.inProduction;
+            this.swaggerEnabled = profileInfo.swaggerEnabled;
         });
     }
 
-    @HostListener('window:scroll', ['$event.target'])
-    onScroll(target) {
-        this.currPos = (window.pageYOffset || target.scrollTop) - (target.clientTop || 0);
-        this.isScrolled = this.currPos >= this.changePos;
-    }
-
     changeLanguage(languageKey: string) {
+        this.sessionStorage.store('locale', languageKey);
         this.languageService.changeLanguage(languageKey);
     }
 
@@ -75,7 +56,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
     }
 
     isAuthenticated() {
-        return this.principal.isAuthenticated();
+        return this.accountService.isAuthenticated();
     }
 
     login() {
@@ -93,12 +74,6 @@ export class NavbarComponent implements OnInit, OnDestroy {
     }
 
     getImageUrl() {
-        return this.isAuthenticated() ? this.principal.getImageUrl() : null;
-    }
-
-    ngOnDestroy() {
-        if (this.userTypeSubscribe) {
-            this.userTypeSubscribe.unsubscribe();
-        }
+        return this.isAuthenticated() ? this.accountService.getImageUrl() : null;
     }
 }
